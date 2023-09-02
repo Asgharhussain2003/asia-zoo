@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Asia Zoo</title>
+    <link rel="stylesheet" href="bootstrap-5.0.2-dist/css/bootstrap.min.css">
+    <script src="bootstrap-5.0.2-dist/js/bootstrap.min.js"></script>
+    <script src="jqurey-js.js"></script>
+    <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css"/>
+<!-- Google Fonts -->
+<link
+href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap"
+rel="stylesheet"/>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+</head>
+
+<style>
+
+.message p{
+  position: absolute;
+  color: aliceblue;
+}
+</style>
+<body>
+
+
+         
+         <!--nav bar-->
+         <nav class="navbar navbar-expand-lg navbar-dark bg-success">
+          <div class="container-fluid">
+            <a class="navbar-brand" href="#">
+              <img src="f logo.png" alt="" style="height: 100px;">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+              <ul class="navbar-nav mx-auto mb-2 mb-lg-0 text-center">
+                <li class="nav-item">
+                  <a class="nav-link" aria-current="page" href="Home.html">Home</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" aria-current="page" href="Habitats.html">Habitats</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="about.html">About</a>
+                </li>
+                              <li class="nav-item dropdown">
+                  <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    Category
+                  </a>
+                  <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                    <li><a class="dropdown-item" href="island.html">Island</a></li>
+                    <li><a class="dropdown-item" href="desert.html">Desert</a></li>
+                    <li><a class="dropdown-item" href="rainforest.html">Tropical Rainforest</a></li>
+                    <li><a class="dropdown-item" href="river.html">Rivere</a></li>
+                  </ul>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link"  href="gallery.html">Gallery</a>
+                </li>
+              </li>
+    
+              
+              <li class="nav-item">
+                  <a class="nav-link"  href="contact us.html">Contact</a>
+                </li>
+                <li>
+                  
+                    <li class="nav-link" data-bs-toggle="modal" data-bs-target="#myModal">
+                    FeedBack
+                </li>
+
+                <!---  The Modal -->
+   <div class="modal " id="myModal" >
+    <div class="modal modal-dialog modal-dialog-centered" >
+    <div class="modal-content">
+    
+      <!-- Modal Header -->
+      <div class="modal-header text-white bg-secondary text-center">
+        <h4 class="modal-title">Give FeedBack</h4>
+        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+      </div>
+    
+      <!-- Modal body -->
+      <div class="modal-body d-flex">
+          <form class="container">
+              <div class="row mt-3">
+                <div class="col">
+                  <input type="text" class="form-control" placeholder=" First Name">
+                </div>
+                <div class="col">
+                  <input type="text" class="form-control" placeholder="last Name">
+                </div>
+              </div>
+              <div class="row mt-3">
+                <div class="col">
+                  <input type="text" class="form-control" placeholder="Email*">
+                </div>
+
+                <div class="col">
+                  <input type="text" class="form-control" placeholder="Enter your Suggestion">
+                </div>
+              
+                <div class="row fw-bold">
+                <ul class="mt-5 d-flex">  
+                   <a href="#" class="star1" onclick="stars1();"> <span class="fas fa-star"></span></a>
+                   <a href="#" class="star2" onclick="stars2()"> <span class="fas fa-star"></span></a>
+                     <a href="#" class="star3" onclick="stars3()"> <span class="fas fa-star"></span></a>
+                     <a href="#" class="star4" onclick="stars4()"> <span class="fas fa-star"></span></a>
+                     <a href="#" class="star5" onclick="stars5()"> <span class="fas fa-star"></span></a>
+                    </ul>
+                  
+              
+
+              <div class="message text-center">
+                <p class="p1"> you give 1 star rating </p>
+                <p class="p2"> you give 2 star rating </p>
+                <p class="p3"> you give 3 star rating </p>
+                <p class="p4"> you give 4 star rating </p>
+                <p class="p5"> you give 5 star rating </p>
+                </div>
+              </div>
+              </div>
+            
+            </form>
+            
+      </div>
+      <script type="text/javascript" src="rating.js"></script>
+      <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css"/>
+      
+      <!-- Modal footer -->
+      <div class="modal-footer ">
+        <a href=""><button type="button" class="btn btn-info" data-bs-dismiss="modal">Submit</button></a>
+        
+      </div>
+    
+    </div>
+    </div>
+    
+    
+
+  
+
+
+
+</div>
+</div>
+
+
+
+                </li>
+              </ul>
+            </div>
+              <div class="links ">
+              <ul class="list-unstyled d-flex ">
+                <li>
+                  
+                  <a href="https://www.facebook.com/Inoxent Ásghær" class=" text-decoration-none text-muted fs-4 me-4 ">
+                    <i class="fab fa-facebook-f text-info"></i>
+                </a>
+            </li>
+    
+            
+    
+            <li>
+                <a href="https:/instagram.com/asgharhussain_26." class="text-white text-decoration-none text-muted fs-4 me-4">
+                    <i class="fab fa-instagram " style="background-image: linear-gradient(rgb(221, 82, 186), rgb(238, 79, 50) );"></i>
+                </a>
+            </li>
+            
+          
+
+            <li>
+                <a href="https://wa.me/+92319-0107047" class="text-white text-decoration-none text-muted fs-4 me-4">
+                    <i class="fab fa-whatsapp  text-white"></i>
+                </a>
+                </li>
+               
+                <li>
+                  <a href="https:/zade86971@gmail.com/#inbox" class="text-white text-decoration-none text-muted fs-4 me-4">
+                      <i class="fas fa-envelope text-danger"></i>
+                  </a>
+              </li>
+            
+            </ul>
+          </div>
+            
+          </div>
+        </nav>
+        
+     <!--nav end-->
+    
+      
+  
+
+
+<img src="img1 (1).jpeg" class="d-block w-100" style="height: 450px; width: 550px;" alt="...">
+ 
+   <center> <h1> <B>  About US</B> </h1> </center>
+
+                                  
+            
+            <div class="container-fluid py-5">
+              <div class="row ">
+                <div class="col-md-6 px-5">
+                  <div class="img1">  
+                    <img src="img1 (2).jpeg" alt=""> <br><br>
+                    <p>The early history of the Zoo is very brief and vague.  The period between 1907 and 1947 <br>
+                       lacked official records, had no professional personnel, and a rather haphazard development.
+                      <div class="h1"><h1>1920’s</h1></div>
+                      <p>The first animals, unwanted pets, were donated and housed in make shift cages.  In the  <br>1920’s the addition of the Amphitheater brought many people to the park and Zoo.  Bears, local cats, hoof stock, and birds were added to the Zoo and housed in log cabin type exhibits.  The American Association of Zoological Parks and Aquariums (AAZPA – now AZA) officially recognizes that the Roeding Park Zoo opened in 1929.
+                        
+                        <div class="h1"><h1>1930’s</h1></div>
+
+                        In the 1930’s the Zoo continued to grow in a rather haphazard manner as more animals were added to the collection.  The cat barn exhibit and small chain-link cages were built by the WPA program. <br> <br>
+                        <div class="h1"><h1>1940’s</h1></div>
+                        By 1947 the Roeding Park Zoo had grown considerably with new species of exotic animals.  Eldon “Curly” Blocker was hired from the San Diego Zoo to serve as the Zoo’s first foreman.  More modern grotto-type exhibits were built. <br> <br>
+
+In 1949 Nosey the elephant was purchased with the help of the Fresno Rotary Club and donations from thousands of school children.  A Name-the-Elephant contest was held in anticipation of the new arrival.  Thousands of school children sent in their pennies, nickels, and dimes.  On September 11, 1949 a colorful “49er’s” Days Rodeo Parade was completely dominated by the young elephant named Nosey. <br> <br>
+
+The success of the event resulted in the formation of the Fresno Zoological Society in 1949.  The purpose of the Society was to support and create interest in the development of the Zoo, and to raise funds for improvements. <br><br>
+
+One of the first major exhibits built after the formation of the Society in 1949 was a modern “Monkey Island”, complete with indoor den and a water moat. <br> <br>
+
+
+<div class="h1"><h1>1950’s</h1></div>
+In the 1950’s exhibits for the sea lion, camel, sun bear, hippopotamus, giraffe, assorted birds, and flamingos were completed. <br> <br>
+
+The Roeding Park Zoo became an institutional member of the American Association of Zoological Parks and Aquariums (AAZPA) in 1957. <br> <br>
+
+
+
+
+                      </p>
+
+                    </p>
+                  </div>
+                </div>
+                
+
+                <div class="col-md-6 px-5">
+                  <div class="img2">
+                    <img src="img1 (3).jpeg" alt=""> <br><br>
+                    <div class="h1"><h1>1960’s</h1></div>
+
+                    <p>In 1985, the name of the Roeding Park Zoo was officially changed to the Fresno Zoo. <br><br>
+                      During the late 1960’s all of the exhibits for the antelope, giraffe, camels, llamas, and zebras were remodeled and new shelters and barns were built.  Many of the older chain link cages were demolished to make room for newer exhibits.  Also, the kit fox exhibit was constructed to the north of the bison exhibit and the existing Education Building was increased by adding 2000 sq. ft. <br><br>
+                    
+                      During the late 1960’s all of the exhibits for the antelope, giraffe, camels, llamas, and zebras were remodeled and new shelters and barns were built.  Many of the older chain link cages were demolished to make room for newer exhibits.  Also, the kit fox exhibit was constructed to the north of the bison exhibit and the existing Education Building was increased by adding 2000 sq. ft. <br><br>
+
+                      In 1988, the Tropical Rain Forest Exhibit, at a cost of about $2.2 million, was completed.  It is 55 feet high and about a half acre in size.  It features plants and animals representing what people might see in a rain forest anywhere in the world. <br><br>
+
+                      The Fresno Zoo was renamed the Chaffee Zoological Gardens of Fresno in 1990 in honor of its longtime director, Dr. Paul S. Chaffee, who passed away that year.  It became more commonly known as the Chaffee Zoo.  Also that year, Nosey the elephant’s former unused exhibit was converted to a gift shop called “Nosey’s Treasure Trunk”, and the sea lion exhibit was again remodeled to look more natural. <br><br>
+
+                      <div class="h1"><h1>1970’s</h1></div>
+  
+One of the most effective early exhibits was the walk-through aviary, constructed in 1960 by the Park Division with Zoo Society generated funds.
+
+Also in the 1970’s the ape grottos and the rhinoceros exhibit were completed.  The Bronx Zoo donated three pairs of crocodiles.  The Zoo grounds were unfenced and admission was free to visitors until 1973.
+
+The Fresno City Council adopted an admission policy because of the rising costs of construction and operation.  A Parks Zoo Admission (Trust) Fund was established to control revenue received from Zoo admission charges and to underwrite the cost of future capital improvements.
+
+In 1975, Dr. Paul Chaffee was hired as the first Director of the Roeding Park Zoo.  Responsibility for management of all aspects of the Zoo shifted from the Zoological Society to the Zoo Director.  With the addition of Dr. Chaffee, new programs of nutrition, quarantine, treatment, and education were established to meet the growing professional standards of zoos.
+
+During the 1970’s many of the Zoo’s exhibits were improved for the comfort of the animals, including the addition of heating in many of the primate quarters.  The large bird-of-prey exhibit was constructed under the direction of the Parks Division in 1967.  The first Zoo master plan was drafted in 1968 to guide the future development of the Zoo.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+       
+<!---->
+<footer class="text-center text-lg-start   text-muted fotclr bg-success text-dark" >
+  <section class="fotclr">
+    <div class="container text-center text-md-start mt-5">
+      <div class="row mt-3">
+
+        <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4 mt-3  text-dark">
+
+          <h6 class="text-uppercase fw-bold mb-4">
+            <img src="f logo.png" style="width: 150px;" alt="">
+          </h6>
+          <p >
+           
+All the work is supervised and coordinated from the initial consultation, the conception of your idea to the final stage of completion. We stand by our mission to provide you with the best service at the most affordable prices.
+          </p>
+        </div>
+
+        <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4 mt-3 ">
+
+          <h6 class="text-uppercase fw-bold mb-4  hed text-dark">
+            Site Map
+          </h6>
+          <p>
+            <a href="Home.html" class="text btn ">Home</a>
+          </p>
+          <p>
+            <a href="#" class="text btn ">About Us</a>
+          </p>
+          <p>
+            <a href="Habitats.html" class="text btn ">Habitats</a>
+          </p>
+          <p>
+            <a href="gallery.html" class="text btn ">gallery</a>
+          </p>
+          <p>
+            <a href="contact us.html" class="text btn ">Contact Us</a>
+          </p>
+        </div>
+
+        
+        <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4 mt-3 text-dark">
+
+          <h6 class="text-uppercase fw-bold mb-4">Contact</h6>
+          <p><i class="fas fa-home me-3"></i>Karachi,Pakistan.</p><br>
+          <p>
+            <i class="fas fa-envelope me-3"></i>
+            info@example.com
+          </p><br>
+          <p><i class="fas fa-phone me-3"></i> + 01 234 567 88</p><br>
+          <p><i class="fas fa-print me-3"></i> + 01 234 567 89</p><br>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+</footer>
+<!--footer end-->
+  
+        </body>
+</html>
+
+
+        

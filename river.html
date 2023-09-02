@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Asia Zoo</title>
+    <link rel="stylesheet" href="bootstrap-5.0.2-dist/css/bootstrap.min.css">
+    <script src="bootstrap-5.0.2-dist/js/bootstrap.min.js"></script>
+    <script src="jqurey-js.js"></script>
+    <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css"/>
+<!-- Google Fonts -->
+<link
+href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap"
+rel="stylesheet"/>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+</head>
+
+<style>
+   
+   .message p{
+    position: absolute;
+    color: aliceblue;
+   }
+</style>
+<body>
+         <!--nav bar-->
+         <nav class="navbar navbar-expand-lg navbar-dark bg-success">
+          <div class="container-fluid">
+            <a class="navbar-brand" href="#">
+              <img src="f logo.png" alt="" style="height: 100px;">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+              <ul class="navbar-nav mx-auto mb-2 mb-lg-0 text-center">
+                <li class="nav-item">
+                  <a class="nav-link" aria-current="page" href="Home.html">Home</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" aria-current="page" href="Habitats.html">Habitats</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="about.html">About</a>
+                </li>
+                              <li class="nav-item dropdown">
+                  <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    Category
+                  </a>
+                  <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                    <li><a class="dropdown-item" href="island.html">Island</a></li>
+                    <li><a class="dropdown-item" href="desert.html">Desert</a></li>
+                    <li><a class="dropdown-item" href="rainforest.html">Tropical Rainforest</a></li>
+                    <li><a class="dropdown-item" href="river.html">Rivere</a></li>
+                  </ul>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link"  href="gallery.html">Gallery</a>
+                </li>
+              </li>
+    
+              
+              <li class="nav-item">
+                  <a class="nav-link"  href="contact us.html">Contact</a>
+                </li>
+                <li>
+                  
+                    <li class="nav-link" data-bs-toggle="modal" data-bs-target="#myModal">
+                    FeedBack
+                </li>
+
+                <!---  The Modal -->
+   <div class="modal " id="myModal" >
+    <div class="modal modal-dialog modal-dialog-centered" >
+    <div class="modal-content">
+    
+      <!-- Modal Header -->
+      <div class="modal-header text-white bg-secondary text-center">
+        <h4 class="modal-title">Give FeedBack</h4>
+        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+      </div>
+    
+      <!-- Modal body -->
+      <div class="modal-body d-flex">
+          <form class="container">
+              <div class="row mt-3">
+                <div class="col">
+                  <input type="text" class="form-control" placeholder=" First Name">
+                </div>
+                <div class="col">
+                  <input type="text" class="form-control" placeholder="last Name">
+                </div>
+              </div>
+              <div class="row mt-3">
+                <div class="col">
+                  <input type="text" class="form-control" placeholder="Email*">
+                </div>
+
+                <div class="col">
+                  <input type="text" class="form-control" placeholder="Enter your Suggestion">
+                </div>
+              
+                <div class="row fw-bold">
+                <ul class="mt-5 d-flex">  
+                   <a href="#" class="star1" onclick="stars1();"> <span class="fas fa-star"></span></a>
+                   <a href="#" class="star2" onclick="stars2()"> <span class="fas fa-star"></span></a>
+                     <a href="#" class="star3" onclick="stars3()"> <span class="fas fa-star"></span></a>
+                     <a href="#" class="star4" onclick="stars4()"> <span class="fas fa-star"></span></a>
+                     <a href="#" class="star5" onclick="stars5()"> <span class="fas fa-star"></span></a>
+                    </ul>
+                  
+              
+
+              <div class="message text-center">
+                <p class="p1"> you give 1 star rating </p>
+                <p class="p2"> you give 2 star rating </p>
+                <p class="p3"> you give 3 star rating </p>
+                <p class="p4"> you give 4 star rating </p>
+                <p class="p5"> you give 5 star rating </p>
+                </div>
+              </div>
+              </div>
+            
+            </form>
+            
+      </div>
+      <script type="text/javascript" src="rating.js"></script>
+      <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css"/>
+      
+      <!-- Modal footer -->
+      <div class="modal-footer ">
+        <a href=""><button type="button" class="btn btn-info" data-bs-dismiss="modal">Submit</button></a>
+        
+      </div>
+    
+    </div>
+    </div>
+    
+    
+
+  
+
+
+
+</div>
+</div>
+
+
+
+                </li>
+              </ul>
+            </div>
+              <div class="links ">
+              <ul class="list-unstyled d-flex ">
+                <li>
+                  
+                  <a href="https://www.facebook.com/Inoxent Ásghær" class=" text-decoration-none text-muted fs-4 me-4 ">
+                    <i class="fab fa-facebook-f text-info"></i>
+                </a>
+            </li>
+    
+            
+    
+            <li>
+                <a href="https:/instagram.com/asgharhussain_26." class="text-white text-decoration-none text-muted fs-4 me-4">
+                    <i class="fab fa-instagram " style="background-image: linear-gradient(rgb(221, 82, 186), rgb(238, 79, 50) );"></i>
+                </a>
+            </li>
+            
+          
+
+            <li>
+                <a href="https://wa.me/+92319-0107047" class="text-white text-decoration-none text-muted fs-4 me-4">
+                    <i class="fab fa-whatsapp  text-white"></i>
+                </a>
+                </li>
+               
+                <li>
+                  <a href="https:/zade86971@gmail.com/#inbox" class="text-white text-decoration-none text-muted fs-4 me-4">
+                      <i class="fas fa-envelope text-danger"></i>
+                  </a>
+              </li>
+
+              </ul>
+          </div>
+            
+          </div>
+        </nav>
+        
+     <!--nav end-->
+
+    
+   <img src="river.jpg" alt="w-100" style="width: 100%;">
+        <div class="container">
+   <h1 class="h1  fw-bold px-4 py-3" style="font-family: serif; ">River</h1>
+   <hr>
+
+   <p class="font-size 10px">What all island ecosystems have in common is that they are isolated from the mainland, and they create special,
+     even unique, environments with species of animals and plants that may be very different
+      from their counterparts on the mainland. In fact, some species are only found on islands
+       because they developed separately, like the kiwi of New Zealand and the Galàpagos tortoise of the
+        Galàpagos Islands. Because they are limited in size and resources, island ecosystems are fragile and easily disturbed by introduced species and human activity. Island animals can quickly become endangered if their habitat is destroyed or what they eat disappears, because they have nowhere else to go.
+
+   </p>
+</div>
+
+
+<div class="image1 px-4 py-3 d-flex">
+      
+      
+  <div class="pic">
+<img src="river/duck.jpg"  class="px-4" style="width: 320px; height: 250px;"></a>
+</div>
+
+<div class="pic">
+  <img src="river/river 1img.jpg" class="px-4" style="width: 320px; height: 250px;">
+</div>
+
+ <div class="pic"> 
+  <img src="river/rive duck.jpg" class="px-4" style="width: 320px; height: 250px;">
+</div>
+
+<div class="pic"> 
+  <img src="river/ell river.jpg" class="px-4" style="width: 320px; height: 250px;">
+</div>
+
+</div>
+
+<div class="image1 px-4 py-3 d-flex">
+      
+      
+  <div class="pic">
+<img src="river/river 2.jpg"  class="px-4" style="width: 320px; height: 250px;"></a>
+</div>
+
+<div class="pic">
+  <img src="river/river 3.jpg" class="px-4" style="width: 320px; height: 250px;">
+</div>
+
+ <div class="pic"> 
+  <img src="river/rain frog.jpg" class="px-4" style="width: 320px; height: 250px;">
+</div>
+
+<div class="pic"> 
+  <img src="river/sea cow.jpg" class="px-4" style="width: 320px; height: 250px;">
+</div>
+
+</div>
+
+
+
+
+<!--footwer-->
+<footer class="text-center text-lg-start   text-muted fotclr bg-success text-dark" >
+  <section class="fotclr">
+    <div class="container text-center text-md-start mt-5">
+      <div class="row mt-3">
+
+        <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4 mt-3  text-dark">
+
+          <h6 class="text-uppercase fw-bold mb-4">
+            <img src="f logo.png" style="width: 150px;" alt="">
+          </h6>
+          <p >
+           
+All the work is supervised and coordinated from the initial consultation, the conception of your idea to the final stage of completion. We stand by our mission to provide you with the best service at the most affordable prices.
+          </p>
+        </div>
+
+        <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4 mt-3 ">
+
+          <h6 class="text-uppercase fw-bold mb-4  hed text-dark">
+            Site Map
+          </h6>
+          <p>
+            <a href="Home.html" class="text btn ">Home</a>
+          </p>
+          <p>
+            <a href="#" class="text btn ">About Us</a>
+          </p>
+          <p>
+            <a href="Habitats.html" class="text btn ">Habitats</a>
+          </p>
+          <p>
+            <a href="gallery.html" class="text btn ">gallery</a>
+          </p>
+          <p>
+            <a href="contact us.html" class="text btn ">Contact Us</a>
+          </p>
+        </div>
+
+        
+        <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4 mt-3 text-dark">
+
+          <h6 class="text-uppercase fw-bold mb-4">Contact</h6>
+          <p><i class="fas fa-home me-3"></i>Karachi,Pakistan.</p><br>
+          <p>
+            <i class="fas fa-envelope me-3"></i>
+            info@example.com
+          </p><br>
+          <p><i class="fas fa-phone me-3"></i> + 01 234 567 88</p><br>
+          <p><i class="fas fa-print me-3"></i> + 01 234 567 89</p><br>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+</footer>
+<!--footer end-->
+    </body>
+</html>

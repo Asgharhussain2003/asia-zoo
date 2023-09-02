@@ -1,0 +1,673 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Asia Zoo</title>
+    <link rel="stylesheet" href="bootstrap-5.0.2-dist/css/bootstrap.min.css">
+    <script src="bootstrap-5.0.2-dist/js/bootstrap.min.js"></script>
+    <script src="jqurey-js.js"></script>
+    <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css"/>
+<!-- Google Fonts -->
+<link
+href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap"
+rel="stylesheet"/>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+<style>
+.active-filter-btn{
+    background-color: black;
+    color: #13ce2c ;
+    border-color: black;
+}
+
+.filter-button-group .btn:hover{
+    color: #1da53b!important;
+}
+
+.collection-img span{
+    top:20px;
+    right: 20px;
+    border-radius: 50%;
+}
+
+.images {
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.image-main {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  position: relative;
+  transition: transform 0.5s ease-in-out;
+}
+
+.image-main img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out;
+}
+
+.image-main img:first-child {
+  opacity: 1;
+}
+
+.images:hover .image-main {
+  transform: scale(1.1); /* Increase scale on hover */
+}
+
+.image-main:hover img {
+  opacity: 0; /* Hide images on hover */
+}
+
+.image-main:hover img:last-child {
+  opacity: 1; /* Show the last image on hover */
+}
+
+.collection-img:img{
+  width: 250px; 
+  height: 200px;
+}
+
+.message p{
+  position: absolute;
+  color: aliceblue;
+}
+        
+</style>
+          
+            
+
+
+</head>
+<body>
+
+         <!--nav bar-->
+         <nav class="navbar navbar-expand-lg navbar-dark bg-success">
+          <div class="container-fluid">
+            <a class="navbar-brand" href="#">
+              <img src="f logo.png" alt="" style="height: 100px;">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+              <ul class="navbar-nav mx-auto mb-2 mb-lg-0 text-center">
+                <li class="nav-item">
+                  <a class="nav-link" aria-current="page" href="Home.html">Home</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" aria-current="page" href="Habitats.html">Habitats</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="about.html">About</a>
+                </li>
+                              <li class="nav-item dropdown">
+                  <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    Category
+                  </a>
+                  <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                    <li><a class="dropdown-item" href="island.html">Island</a></li>
+                    <li><a class="dropdown-item" href="desert.html">Desert</a></li>
+                    <li><a class="dropdown-item" href="rainforest.html">Tropical Rainforest</a></li>
+                    <li><a class="dropdown-item" href="river.html">Rivere</a></li>
+                  </ul>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link"  href="gallery.html">Gallery</a>
+                </li>
+              </li>
+    
+              
+              <li class="nav-item">
+                  <a class="nav-link"  href="contact us.html">Contact</a>
+                </li>
+                <li>
+                  
+                    <li class="nav-link" data-bs-toggle="modal" data-bs-target="#myModal">
+                      FeedBack
+                </li>
+
+                <!---  The Modal -->
+   <div class="modal " id="myModal" >
+    <div class="modal modal-dialog modal-dialog-centered" >
+    <div class="modal-content">
+    
+      <!-- Modal Header -->
+      <div class="modal-header text-white bg-success">
+        <h4 class="modal-title text-center"  >FeedBack</h4>
+        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+      </div>
+    
+      <!-- Modal body -->
+      <div class="modal-body d-flex">
+          <form class="container">
+              <div class="row mt-3">
+                <div class="col">
+                  <input type="text" class="form-control" placeholder=" First Name">
+                </div>
+                <div class="col">
+                  <input type="text" class="form-control" placeholder="last Name">
+                </div>
+              </div>
+              <div class="row mt-3">
+                <div class="col">
+                  <input type="text" class="form-control" placeholder="Email*">
+                </div>
+
+                <div class="col">
+                  <input type="text" class="form-control" placeholder="Enter your Suggestion">
+                </div>
+              
+                <div class="row fw-bold">
+                <ul class="mt-5 d-flex">  
+                   <a href="#" class="star1" onclick="stars1();"> <span class="fas fa-star"></span></a>
+                   <a href="#" class="star2" onclick="stars2()"> <span class="fas fa-star"></span></a>
+                     <a href="#" class="star3" onclick="stars3()"> <span class="fas fa-star"></span></a>
+                     <a href="#" class="star4" onclick="stars4()"> <span class="fas fa-star"></span></a>
+                     <a href="#" class="star5" onclick="stars5()"> <span class="fas fa-star"></span></a>
+                    </ul>
+                  
+              
+
+              <div class="message text-center">
+                <p class="p1"> you give 1 star rating </p>
+                <p class="p2"> you give 2 star rating </p>
+                <p class="p3"> you give 3 star rating </p>
+                <p class="p4"> you give 4 star rating </p>
+                <p class="p5"> you give 5 star rating </p>
+                </div>
+              </div>
+              </div>
+            
+            </form>
+            
+      </div>
+      <script type="text/javascript" src="rating.js"></script>
+      <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css"/>
+      
+      <!-- Modal footer -->
+      <div class="modal-footer ">
+        <a href="#"><button type="button" class="btn btn-info" data-bs-dismiss="modal">Submit</button></a>
+        <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Close</button>
+      </div>
+    
+    </div>
+    </div>
+    
+    
+
+  
+
+
+
+</div>
+</div>
+
+
+
+                </li>
+              </ul>
+            </div>
+              <div class="links ">
+              <ul class="list-unstyled d-flex ">
+              
+                  
+                  <li>
+                  
+                    <a href="https://www.facebook.com/Inoxent Ásghær" class=" text-decoration-none text-muted fs-4 me-4 ">
+                      <i class="fab fa-facebook-f text-info"></i>
+                  </a>
+              </li>
+      
+              
+      
+              <li>
+                  <a href="https:/instagram.com/asgharhussain_26." class="text-white text-decoration-none text-muted fs-4 me-4">
+                      <i class="fab fa-instagram " style="background-image: linear-gradient(rgb(221, 82, 186), rgb(238, 79, 50) );"></i>
+                  </a>
+              </li>
+              
+            
+  
+              <li>
+                  <a href="https://wa.me/+92319-0107047" class="text-white text-decoration-none text-muted fs-4 me-4">
+                      <i class="fab fa-whatsapp  text-white"></i>
+                  </a>
+                  </li>
+                 
+                  <li>
+                    <a href="https:/zade86971@gmail.com/#inbox" class="text-white text-decoration-none text-muted fs-4 me-4">
+                        <i class="fas fa-envelope text-danger"></i>
+                    </a>
+                </li>
+              </ul>
+          </div>
+            
+          </div>
+        </nav>
+        
+     <!--nav end-->
+
+    
+<section id="collection" class="py-5">
+  <div class="container">
+    
+    <div class="row d-flex">
+      <div class="d-flex flex-wrap justify-content-center mt-5 filter-button-group">
+        <button type="button" class="btn m-2 text-dark active-filter-btn" data-filter="*">All</button>
+        <button type="button" class="btn m-2 text-success" data-filter=".Arthropods">Arthropods</button>
+        <button type="button" class="btn m-2 text-success" data-filter=".Amphibians">Amphibians</button>
+        <button type="button" class="btn m-2 text-success" data-filter=".Mamals">Mamals</button>
+        <button type="button" class="btn m-2 text-success" data-filter=".plants">Plants</button>
+        <button type="button" class="btn m-2 text-success" data-filter=".Reptials">Reptials</button>
+        <button type="button" class="btn m-2 text-success" data-filter=".Fish">Fish</button>
+        <button type="button" class="btn m-2 text-success" data-filter=".birds">Birds</button>
+      </div>
+        
+      <div class="collection-list mt-4 mt-xl-4 row gx-0 gy-3">
+
+
+        <div class="col-md-6 col-lg-4 col-xl-3 p-4 Amphibians">
+            <div class="collection-img position-relative">
+                <img src="gellery img/ant.jpg" alt="" class="w-100">
+                <div class="text-center">
+                  <h5 class="text-capitalize my-1 h5">Ant</h5>
+                </div>        
+            </div>
+        </div>
+      
+      <div class="col-md-6 col-lg-4 col-xl-3 p-4  Mamals">
+        <div class="collection-img position-relative">
+          <img src="gellery img/acica.jpg" alt="Mamals Image" class="w-100">
+        </div>
+        <div class="text-center">
+          <h5 class="text-capitalize my-1 h5">Acica</h5>
+        </div>
+      </div>
+
+      <div class="col-md-6 col-lg-4 col-xl-3 p-4  Mamals">
+        <div class="collection-img position-relative">
+          <img src="gellery img/antelope.jpg" alt="Bird Image" class="w-100">
+        </div>
+        <div class="text-center">
+          <h5 class="text-capitalize my-1 h5">antelope</h5>
+        </div>
+      </div>
+
+      
+      <div class="col-md-6 col-lg-4 col-xl-3 p-4  plants">
+        <div class="collection-img position-relative">
+          <img src="gellery img/banana.jpg" alt="Bird Image" class="w-100">
+        </div>
+        <div class="text-center">
+          <h5 class="text-capitalize my-1 h5">banana</h5>
+        </div>
+      </div>
+
+
+      <div class="col-md-6 col-lg-4 col-xl-3 p-4  Mamals">
+        <div class="collection-img position-relative">
+          <img src="gellery img/barbirusa.jpg" alt="Mamals Image" class="w-100">
+        </div>
+        <div class="text-center">
+          <h5 class="text-capitalize my-1 h5">barbirusa</h5>
+        </div>
+      </div>
+      
+
+      <div class="col-md-6 col-lg-4 col-xl-3 p-4  Mamals">
+        <div class="collection-img position-relative">
+          <img src="gellery img/Bamboo.jpg" alt="Mamals Image" class="w-100">
+        </div>
+        <div class="text-center">
+          <h5 class="text-capitalize my-1 h5">Bamboo</h5>
+        </div>
+      </div>
+
+<div class="col-md-6 col-lg-4 col-xl-3 p-4  birds">
+<div class="collection-img position-relative">
+    <img src="gellery img/bat.jpg" alt="Bird Image" class="w-100">
+</div>
+<div class="text-center">
+    <h5 class="text-capitalize my-1 h5">Bat</h5>
+</div>
+</div>
+
+<div class="col-md-6 col-lg-4 col-xl-3 p-4  Arthropods">
+<div class="collection-img position-relative">
+    <img src="gellery img/bee.jpg" alt="Arthropods Image" class="w-100">
+</div>
+<div class="text-center">
+    <h5 class="text-capitalize my-1 h5">Bee</h5>
+</div>
+</div>
+
+
+
+
+<div class="col-md-6 col-lg-4 col-xl-3 p-4  Reptials">
+  <div class="collection-img position-relative">
+      <img src="gellery img/boa.jpg" alt="Reptials Image" class="w-100">
+  </div>
+  <div class="text-center">
+      <h5 class="text-capitalize my-1 h5">Boa</h5>
+  </div>
+</div>
+
+<div class="col-md-6 col-lg-4 col-xl-3 p-4  Mamals">
+  <div class="collection-img position-relative">
+      <img src="gellery img/brownbear.jpg" alt="Mamals Image" class="w-100">
+  </div>
+  <div class="text-center">
+      <h5 class="text-capitalize my-1 h5">Brown Bear</h5>
+  </div>
+</div>
+
+<div class="col-md-6 col-lg-4 col-xl-3 p-4  Arthropods">
+  <div class="collection-img position-relative">
+      <img src="gellery img/butterfly.jpg" alt="Arthropods Image" class="w-100">
+  </div>
+  <div class="text-center">
+      <h5 class="text-capitalize my-1 h5">Butterfly</h5>
+  </div>
+</div>
+
+
+<div class="col-md-6 col-lg-4 col-xl-3 p-4  birds">
+  <div class="collection-img position-relative">
+      <img src="gellery img/cattails.jpg" alt="Birds Image" class="w-100">
+  </div>
+  <div class="text-center">
+      <h5 class="text-capitalize my-1 h5">Cattils</h5>
+  </div>
+</div>
+
+
+<div class="col-md-6 col-lg-4 col-xl-3 p-4  Reptials">
+  <div class="collection-img position-relative">
+      <img src="gellery img/chameleon reptiles.jpg" alt="Reptials Image" class="w-100">
+  </div>
+  <div class="text-center">
+      <h5 class="text-capitalize my-1 h5">chameleon</h5>
+  </div>
+</div>
+
+<div class="col-md-6 col-lg-4 col-xl-3 p-4  Mamals">
+  <div class="collection-img position-relative">
+      <img src="gellery img/camels.jpg" alt="Mamals Image" class="w-100">
+  </div>
+  <div class="text-center">
+      <h5 class="text-capitalize my-1 h5">camels</h5>
+  </div>
+</div>
+
+<div class="col-md-6 col-lg-4 col-xl-3 p-4  Fish">
+  <div class="collection-img position-relative">
+      <img src="gellery img/cichild.jpg" alt="Fish Image" class="w-100">
+  </div>
+  <div class="text-center">
+      <h5 class="text-capitalize my-1 h5">cichild</h5>
+  </div>
+</div>
+
+
+
+
+  <div class="col-md-6 col-lg-4 col-xl-3 p-4  Reptials">
+    <div class="collection-img position-relative">
+        <img src="gellery img/crocodilian.jpg" alt="Reptials Image" class="w-100">
+    </div>
+    <div class="text-center">
+        <h5 class="text-capitalize my-1 h5">crocodilian</h5>
+    </div>
+</div>
+
+
+
+  <div class="col-md-6 col-lg-4 col-xl-3 p-4  mamals">
+    <div class="collection-img position-relative">
+        <img src="gellery img/clouded_leopard.jpg" alt="Mamals Image" class="w-100">
+    </div>
+    <div class="text-center">
+        <h5 class="text-capitalize my-1 h5">clouded-leopard</h5>
+    </div>
+  </div>
+
+  <div class="col-md-6 col-lg-4 col-xl-3 p-4  Reptials">
+    <div class="collection-img position-relative">
+        <img src="gellery img/Caecilian.jpg" alt=" Reptials Image" class="w-100">
+    </div>
+    <div class="text-center">
+        <h5 class="text-capitalize my-1 h5">Caecilian</h5>
+    </div>
+  </div>
+
+  <div class="col-md-6 col-lg-4 col-xl-3 p-4  Reptials">
+    <div class="collection-img position-relative">
+        <img src="home 2.jpg" alt="Reptials Image" class="w-100">
+    </div>
+    <div class="text-center">
+        <h5 class="text-capitalize my-1 h5">Cobra</h5>
+    </div>
+  </div>
+
+    <div class="col-md-6 col-lg-4 col-xl-3 p-4  birds">
+      <div class="collection-img position-relative">
+          <img src="gellery img/crane.jpg" alt="" class="w-100">
+      </div>
+      <div class="text-center">
+          <h5 class="text-capitalize my-1 h5">Crane</h5>
+      </div>
+  </div>
+  
+
+
+    <div class="col-md-6 col-lg-4 col-xl-3 p-4 Mamals">
+      <div class="collection-img position-relative">
+          <img src="gellery img/dhole.jpg" alt="" class="w-100">
+      </div>
+      <div class="text-center">
+          <h5 class="text-capitalize my-1 h5">Dhole</h5>
+      </div>
+    </div>
+  
+    <div class="col-md-6 col-lg-4 col-xl-3 p-4 Mamals">
+      <div class="collection-img position-relative">
+          <img src="gellery img/dear1.jpg" alt="" class="w-100">
+      </div>
+      <div class="text-center">
+          <h5 class="text-capitalize my-1 h5">Dear</h5>
+      </div>
+    </div>
+  
+    <div class="col-md-6 col-lg-4 col-xl-3 p-4 Mamals">
+      <div class="collection-img position-relative">
+          <img src="gellery img/eucalypt.jpg" alt="" class="w-100">
+      </div>
+      <div class="text-center">
+          <h5 class="text-capitalize my-1 h5">Eucalypt</h5>
+      </div>
+    </div>
+
+    <div class="col-md-6 col-lg-4 col-xl-3 p-4 Mamals">
+      <div class="collection-img position-relative">
+          <img src="hoome 4.jpg" alt="" class="w-100">
+      </div>
+      <div class="text-center">
+          <h5 class="text-capitalize my-1 h5">Elephant</h5>
+      </div>
+  </div>
+    
+
+    
+  
+    
+    <div class="col-md-6 col-lg-4 col-xl-3 p-4 Mamals">
+      <div class="collection-img position-relative">
+          <img src="gellery img/_ishingcat.jpg" alt="" class="w-100">
+      </div>
+      <div class="text-center">
+          <h5 class="text-capitalize my-1 h5">Fishing Cat</h5>
+      </div>
+    </div>
+  
+
+    <div class="col-md-6 col-lg-4 col-xl-3 p-4 Reptials">
+      <div class="collection-img position-relative">
+          <img src="gellery img/giant chineses alamander.jpg" alt="" class="w-100">
+      </div>
+      <div class="text-center">
+          <h5 class="text-capitalize my-1 h5">Giant chineses alamander</h5>
+      </div>
+  </div>
+
+  <div class="col-md-6 col-lg-4 col-xl-3 p-4  Fish">
+    <div class="collection-img position-relative">
+      <img src="gellery img/Koi fish.jpg" alt="Fish Image" class="w-100">
+    </div>
+    <div class="text-center">
+      <h5 class="text-capitalize my-1 h5">Koi</h5>
+    </div>
+  </div>
+
+  <div class="col-md-6 col-lg-4 col-xl-3 p-4 Reptials">
+    <div class="collection-img position-relative">
+        <img src="gellery img/lizards reptles.jpg" alt="" class="w-100">
+    </div>
+    <div class="text-center">
+        <h5 class="text-capitalize my-1 h5">lizards</h5>
+    </div>
+  </div>
+
+  
+  <div class="col-md-6 col-lg-4 col-xl-3 p-4 Reptials">
+    <div class="collection-img position-relative">
+        <img src="gellery img/newt Amphabins.jpg" alt="" class="w-100">
+    </div>
+    <div class="text-center">
+        <h5 class="text-capitalize my-1 h5">newt Amphabins</h5>
+    </div>
+  </div>
+
+  <div class="col-md-6 col-lg-4 col-xl-3 p-4 birds">
+      <div class="collection-img position-relative">
+          <img src="gellery img/parrot.jpg" alt="" class="w-100">
+      </div>
+      <div class="text-center">
+          <h5 class="text-capitalize my-1 h5">parrot</h5>
+      </div>
+    </div>
+
+
+    
+
+    <div class="col-md-6 col-lg-4 col-xl-3 p-4 birds">
+      <div class="collection-img position-relative">
+          <img src="gellery img/peackok.jpg" alt="" class="w-100">
+      </div>
+      <div class="text-center">
+          <h5 class="text-capitalize my-1 h5">Peackok</h5>
+      </div>
+    </div>
+
+    <div class="col-md-6 col-lg-4 col-xl-3 p-4 Reptials">
+      <div class="collection-img position-relative">
+          <img src="gellery img/burmesepython reptilis.jpg" alt="" class="w-100">
+      </div>
+      <div class="text-center">
+          <h5 class="text-capitalize my-1 h5">python </h5>
+      </div>
+    </div>
+    
+    
+      
+  </div>
+  </div>
+    </div>
+  
+</section>
+
+<!--geller end-->
+
+<!---->
+<footer class="text-center text-lg-start   text-muted fotclr bg-success text-dark" >
+  <section class="fotclr">
+    <div class="container text-center text-md-start mt-5">
+      <div class="row mt-3">
+
+        <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4 mt-3  text-dark">
+
+          <h6 class="text-uppercase fw-bold mb-4">
+            <img src="f logo.png" style="width: 150px;" alt="">
+          </h6>
+          <p >
+           
+All the work is supervised and coordinated from the initial consultation, the conception of your idea to the final stage of completion. We stand by our mission to provide you with the best service at the most affordable prices.
+          </p>
+        </div>
+
+        <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4 mt-3 ">
+
+          <h6 class="text-uppercase fw-bold mb-4  hed text-dark">
+            Site Map
+          </h6>
+          <p>
+            <a href="Home.html" class="text btn ">Home</a>
+          </p>
+          <p>
+            <a href="#" class="text btn ">About Us</a>
+          </p>
+          <p>
+            <a href="Habitats.html" class="text btn ">Habitats</a>
+          </p>
+          <p>
+            <a href="gallery.html" class="text btn ">gallery</a>
+          </p>
+          <p>
+            <a href="contact us.html" class="text btn ">Contact Us</a>
+          </p>
+        </div>
+
+        
+        <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4 mt-3 text-dark">
+
+          <h6 class="text-uppercase fw-bold mb-4">Contact</h6>
+          <p><i class="fas fa-home me-3"></i>Karachi,Pakistan.</p><br>
+          <p>
+            <i class="fas fa-envelope me-3"></i>
+            info@example.com
+          </p><br>
+          <p><i class="fas fa-phone me-3"></i> + 01 234 567 88</p><br>
+          <p><i class="fas fa-print me-3"></i> + 01 234 567 89</p><br>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+</footer>
+<!--footer end-->
+
+
+   <!-- custom jquery -->
+ <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+ <!-- isotops cdn -->
+ <script src="https://unpkg.com/isotope-layout@3/dist/isotope.pkgd.js"></script>
+
+ <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+   <script src="index.js"></script>
+</body>
+
+</html>
